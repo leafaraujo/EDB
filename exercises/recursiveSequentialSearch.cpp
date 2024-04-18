@@ -48,7 +48,7 @@ int main(){
         std::cout << "Esse valor não está na lista!" << std::endl;
     }
     else{
-        std::cout << "O índice pra o valor: " << value << "é o " << index << std::endl;
+        std::cout << "O índice pra o valor: " << value << " é o " << index << std::endl;
     }
 
     return 0;

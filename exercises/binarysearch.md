@@ -1,4 +1,4 @@
-# Algoritmo de busca binária - iterativo (exercício II)
+# Exercício 2 - Algoritmo de busca binária(iterativo) 
 
 Dado um vetor A de tamanho N, ordenado de forma crescente:
 - Implemente o algoritmo de busca binária na forma iterativa.

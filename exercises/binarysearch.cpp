@@ -13,18 +13,17 @@ vector<int> initializeOrderedVector(){
       if(element == -1){
         break;
         }
-      else if(counter == 0){
-        vetor.push_back(element);
-        std::cout << std::endl;
-      }
-      else if(element > vetor[counter]){
+        else if(counter == 0){
+          vetor.push_back(element);
+          counter ++;
+        }
+      else if(element > vetor.back()){
         vetor.push_back(element);
         std::cout << std::endl;
         }
         else{
-          std::cout << "O elemento deve ser maior que o anterior!" << std::endl;
+          std::cout << "O elemento deve ser maior que o anterior!" <<              std::endl;
         }
-      counter ++;
     }
     return vetor;
 }
@@ -34,7 +33,7 @@ int binarySearch(const vector<int>& _vetor, int element, int size){
   while(limInferior <= limSuperior){
     meio = (limInferior + limSuperior) / 2;
     if(_vetor[meio] == element){
-      return element;
+      return meio;
     }
     else if(_vetor[meio] < element){
       limInferior = meio + 1;
@@ -53,12 +52,12 @@ int main(){
   std::cout << "Digite o elemento a ser buscado no vetor: ";
   std::cin >> element;
   index = binarySearch(vetor, element, sizeOfVector);
-  
+
   if(index == -1){
     std::cout << "O elemento não foi encontrado nesse vetor!" << std::endl;
   }
   else{
-    std::cout << "O elemento " << element << "foi encontrado no ídice " << index << " do vetor!" << std::endl;
+    std::cout << "O elemento " << element << " foi encontrado no ídice " << index << " do vetor!" << std::endl;
   }
 
   return 0;

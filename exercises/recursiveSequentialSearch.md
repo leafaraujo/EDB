@@ -7,6 +7,9 @@ Dado um vetor A de tamanho N, com valores inteiros e um valor inteiro X.
 2. A complexidade no pior caso é a mesma da versão iterativa?
 3. Teste o algoritmo para diferentes casos de entrada, variando o tamanho e conteúdo do vetor.
 
+# O que faz?
+- Esse algoritmo recebe um vetor e busca um elemento dentro dele, de forma iterativa, retornando seu índice.
+
 # Respostas
 
 1. A complexidade temporal para o pior caso é descrita por *O(n)* e pode ser provada por prova direta:

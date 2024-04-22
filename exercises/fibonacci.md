@@ -14,4 +14,25 @@
   ```
   
     - É possível implementar uma versão recursivamais eficiente em termos de complexidade temporal?
+
+# Respostas
+
+1. Para o pior caso, esse algoritmo, por executar uma recursão dupla tem complexidade de O(2^n). Porque cada chamada do algoritmo chama outras duas, e assim percebe-se que é uma potencia de 2.
+2. A versão interativa tem uma implementação semelhante a essa.
+    
+    ```C++
+    int fibonnaciIterativo(int n){
+
+    int numOne = 1, numTwo = 1, numResult;
+    for(int i = 0; i <= n; i++){
+        numResult = numOne + numTwo;
+        numOne = numTwo;
+        numTwo = numResult;
+        }
+    return numResult;
+    }
+    ```
+E nesse caso, pode-se observar que sua complexidade *O(n)* na qual n é a entrada dada pelo usuário e sendo assim, a sua complexidade e custo temporal é menos que a versão recursiva apresentada.
+
+3. 
   

@@ -22,8 +22,8 @@ vector<int> initializeVector(){
 }
 
 bool isOrdered(const vector<int>& _vetor){
-  for(int i = 0; i < _vetor.size() - 1; i++){
-    if(_vetor[i] < _vetor [i-1]){
+  for(int i = 0; i < _vetor.size() - 2; i++){
+    if(_vetor[i] > _vetor [i+1]){
       return false;
     }
   }

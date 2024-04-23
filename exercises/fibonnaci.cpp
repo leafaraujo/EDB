@@ -1,6 +1,17 @@
 # include <iostream>
 using namespace std;
 
+int fibonnaciIterativo(int n){
+
+int numOne = 1, numTwo = 1, numResult;
+for(int i = 0; i <= n; i++){
+    numResult = numOne + numTwo;
+    numOne = numTwo;
+    numTwo = numResult;
+    }
+return numResult;
+}
+
 int main(){
   int number, position;
   cout << "---------------------------------------- Fibonnaci Simulator ----------------------------------------" << endl;
@@ -9,5 +20,6 @@ int main(){
   cout << endl;
   
   number = searchFibonnaci(position)
+  cout << "O número na posição " << position << " é o " << number << endl;
   return 0;
 }

@@ -10,4 +10,4 @@
 - Esse algoritmo recebe um vetor e percorre ele todo, verificando sempre se o próximo elemento a ser verificado é menor que o anterior. Caso seja, ele vai retornar falso. Caso percorra todo o vetor e não encontre uma ocorrência disso, ele retorna verdadeiro.
 
 # Resposta
-- Nesse algoritmo, o melhor caso seria quando ele fizesse a verificação na primeira repetição e retornasse que a lista nçao está ordendada e nesse caso a complexidade seria *O(1)*. E o pior caso seria em duas situações: A lista está ordenada, ou o último elemento é maior que o penúltimo. Sendo assim, a sua complexidade seria *O(n)* na qual n é o tamanho do vetor repassado.
+- Nesse algoritmo, o melhor caso seria quando ele fizesse a verificação na primeira repetição e retornasse que a lista nçao está ordendada e nesse caso a complexidade seria *O(1)*. E o pior caso seria em duas situações: A lista está ordenada, ou o último elemento é maior que o penúltimo. Sendo assim, a sua complexidade seria *O(n - 1)* na qual n é o tamanho do vetor repassado.

@@ -54,11 +54,11 @@
     - Segue inicialização do algoritmo na função main:
       ```C++
       int main(){
-      std::cout << "Digite qual número da sequência de fibbonaci que deseja descobrir: ";
-      std::cin >> index;
-      std::cout << std::endl;
-      x = fibbonaci(1, 1, 1, index);
-      std::cout << "O número que se encontra na posição " << index << " da sequência eh o " << x << std::endl;
+        std::cout << "Digite qual número da sequência de fibbonaci que deseja descobrir: ";
+        std::cin >> index;
+        std::cout << std::endl;
+        x = fibbonaci(1, 1, 1, index);
+        std::cout << "O número que se encontra na posição " << index << " da sequência eh o " << x << std::endl;
       }
 
   

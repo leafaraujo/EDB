@@ -25,4 +25,6 @@ Dado um vetor A de tamanho N, com valores inteiros e um valor inteiro X.
    | 0 1 2 3 4 5 43  | 2 | O índice pra o valor: 2 é o 2 |
    | 10 20 390 76 43 29 80 51 32 90 76 32 7 39 24 27 | 27 | O índice pra o valor: 27 é o 15|
    | 1 1 2 3 5 8 12 21 34 55 89 144 | 34 | O índice pra o valor: 34 é o 8 |
+   | 0 1 2 3 4 5 6 7 8 9 10 11 12 13 14 15 16 17 18 19 20 | 15 | O índice pra o valor: 15 é o 15 |
+   | 23 10 03 31 07 27 | 10 | O índice pra o valor: 10 é o 1 
    

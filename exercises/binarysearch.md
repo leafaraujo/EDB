@@ -15,3 +15,12 @@ Dado um vetor A de tamanho N, ordenado de forma crescente:
   - O vetor percorrido está sendo o mesmo;
   - A quantidade de vezes que vai executar o algoritmo vai ser a mesma.
 2. Como já descrito na questão 1, ambos os casos tem complexidade temporal igual, que seria *O(n)* para o melhor caso, e *O(log(n))* para o pior caso. Já para a complexidade espacial,como a função apenas pega o vetor por referencia e não faz uma alocação a mais ou algum tipo de recursão, sua complexidade temporal se dá por *O(1)* no pior e no melhor caso. Para sua versão recursiva, a complexidade espacial é linear, pois para o pior caso, a recursão acontecerá muitas vezes e vai sendo alocado na memória, sendo assim, a complexidade é *O(log(n))*.
+3. | INPUT I |  INPUT II | OUTPUT |
+   |---------|-----------|--------|
+   | 9 8 7 1 |    N/A    |  O vetor não está ordenado! |
+   | 1 2 3 4 5 6 7 8 9 10 11 | 6 | O elemento 6 foi encontrado no índice 5 do vetor! |
+   | 10 20 30 40 50 60 70 80 99 100 | 99 | O elemento 99 foi encontrado no índice 8 do vetor! |
+   | 11 22 33 44 55 66 77 88 99 1110 | 10 | O elemento não foi encontrado nesse vetor! |
+   | 1 1 2 3 5 8 13 21 34 55 89 | 21 | O elemento 21 foi encontrado no índice 7 do vetor! |
+   | 1 2 5 8 12 15 23 31 40 45 54 55 57 61 64 67 68 70 79 80 84 85 89 90 91 92 95 97 99 | 97 | O elemento 97 foi encontrado no índice 27 do vetor! |
+   | 10 20 30 49 74 7 74 78 80 81 83 85 86 87 89 90 | N/A | O vetor não está ordenado! |

@@ -1,21 +1,21 @@
 #include <iostream>
 #include <vector>
+#include <sstream>
 
 using std::vector;
 
 vector<int> initializeVector(){
-    vector<int> vetor;
-    int element;
-    std::cout << "Vamos fazer um vetor? Digite o número do elemento a ser adicionado.[Caso deseje parar insira -1]" << std::endl;
-    while(true){
-        std::cout << "Digite o elemento a ser adicionado: ";
-        std::cin >> element;
-        if(element == -1){
-            break;
-        }
-        vetor.push_back(element);
-        std::cout << std::endl;
-        }
+  vector<int> vetor;
+  std::string input;
+  std::cout << "Digite os valores separados por espaço: ";
+  std::getline(std::cin, input);
+
+  std::stringstream ss(input);
+  int valor;
+
+  while (ss >> valor) {
+      vetor.push_back(valor);
+  }
     return vetor;
 }
 
@@ -31,7 +31,7 @@ int recursiveSequentialSearch(const vector<int>& _vetor, int value, int index){
     else{
         return recursiveSequentialSearch(_vetor, value, index + 1);
     }
- 
+
 }
 
 

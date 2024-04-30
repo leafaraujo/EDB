@@ -1,30 +1,30 @@
 #include <iostream>
 #include <vector>
+#include <sstream>
 
 using std::vector;
 
-vector<int> initializeOrderedVector(){
-    vector<int> vetor;
-    int element, counter = 0;
-    std::cout << "Vamos fazer um vetor? Digite o número do elemento a ser adicionado.[Caso deseje parar digite -1]" << std::endl;
-    while(true){
-      std::cout << "Digite o elemento a ser adicionado: ";
-      std::cin >> element;
-      if(element == -1){
-        break;
-        }
-        else if(counter == 0){
-          vetor.push_back(element);
-          counter ++;
-        }
-      else if(element > vetor.back()){
-        vetor.push_back(element);
-        std::cout << std::endl;
-        }
-        else{
-          std::cout << "O elemento deve ser maior que o anterior!" <<              std::endl;
-        }
+bool isOrdered(const vector<int>& _vetor){
+  for(int i = 0; i < _vetor.size() - 2; i++){
+    if(_vetor[i] > _vetor [i+1]){
+      return false;
     }
+  }
+  return true;
+}
+
+vector<int> initializeOrderedVector(){
+  vector<int> vetor;
+  std::string input;
+  std::cout << "Digite os valores separados por espaço: ";
+  std::getline(std::cin, input);
+
+  std::stringstream ss(input);
+  int valor;
+
+  while (ss >> valor) {
+      vetor.push_back(valor);
+  }
     return vetor;
 }
 
@@ -49,16 +49,20 @@ int main(){
   vector<int> vetor = initializeOrderedVector();
   int element = 0, index;
   int sizeOfVector = vetor.size();
-  std::cout << "Digite o elemento a ser buscado no vetor: ";
-  std::cin >> element;
-  index = binarySearch(vetor, element, sizeOfVector);
+  if(isOrdered(vetor)){
+    std::cout << "Digite o elemento a ser buscado no vetor: ";
+    std::cin >> element;
+    index = binarySearch(vetor, element, sizeOfVector);
 
-  if(index == -1){
-    std::cout << "O elemento não foi encontrado nesse vetor!" << std::endl;
+    if(index == -1){
+      std::cout << "O elemento não foi encontrado nesse vetor!" << std::endl;
+    }
+    else{
+      std::cout << "O elemento " << element << " foi encontrado no ídice " << index << " do vetor!" << std::endl;
+    }
   }
   else{
-    std::cout << "O elemento " << element << " foi encontrado no ídice " << index << " do vetor!" << std::endl;
+    std::cout << "O vetor não está ordenado!" << std::endl;
   }
-
   return 0;
 }

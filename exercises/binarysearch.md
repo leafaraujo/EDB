@@ -24,3 +24,5 @@ Dado um vetor A de tamanho N, ordenado de forma crescente:
    | 1 1 2 3 5 8 13 21 34 55 89 | 21 | O elemento 21 foi encontrado no índice 7 do vetor! |
    | 1 2 5 8 12 15 23 31 40 45 54 55 57 61 64 67 68 70 79 80 84 85 89 90 91 92 95 97 99 | 97 | O elemento 97 foi encontrado no índice 27 do vetor! |
    | 10 20 30 49 74 7 74 78 80 81 83 85 86 87 89 90 | N/A | O vetor não está ordenado! |
+   | 1 1 2 3 5 8 13 21 34 55 89 | 87 | O elemento não foi encontrado nesse vetor! |
+   | 1 4 5 7 8 9 10 12 15 17 18 19 20 | 20 | O elemento 20 foi encontrado no índice 11 do vetor! |

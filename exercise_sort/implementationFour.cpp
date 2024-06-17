@@ -29,40 +29,45 @@ bool isOrdered(const vector<int> &_vetor){
 }
 
 void merge(vector<int> &vec, int inicio, int meio, int fim) {
-    int n1 = meio - inicio + 1;
-    int n2 = fim - meio;
+  int subArrayOne = meio - inicio + 1;
+  int subArrayTwo = fim - meio;
 
-    vector<int> left(n1);
-    vector<int> right(n2);
+  vector<int> left(subArrayOne);
+  vector<int> right(subArrayTwo);
 
-    for (int i = 0; i < n1; i++)
-        left[i] = vec[inicio + i];
-    for (int j = 0; j < n2; j++)
-        right[j] = vec[meio + 1 + j];
+  for(int i = 0; i < subArrayOne ; i++){
+    left[i] = vec[inicio + i];
+  }
+  for(int j = 0; j < subArrayTwo; j++){
+    right[j] = vec[meio + 1 + j];
+  }
 
-    int i = 0, j = 0, k = inicio;
-    while (i < n1 && j < n2) {
-        if (left[i] <= right[j]) {
-            vec[k] = left[i];
-            i++;
-        } else {
-            vec[k] = right[j];
-            j++;
-        }
-        k++;
+  int indexOne = 0, indexTwo = 0, indexMerge = inicio;
+
+  while(indexOne < subArrayOne && indexTwo < subArrayTwo){
+    if(left[indexOne] <= right[indexTwo]){
+      vec[indexMerge] = left[indexOne];
+      indexOne++;
     }
-
-    while (i < n1) {
-        vec[k] = left[i];
-        i++;
-        k++;
+    else{
+      vec[indexMerge] = right[indexTwo];
+      indexTwo ++;
     }
+    indexMerge ++;
+  }
 
-    while (j < n2) {
-        vec[k] = right[j];
-        j++;
-        k++;
-    }
+  while(indexOne < subArrayOne){
+    vec[indexMerge] = left[indexOne];
+    indexMerge++;
+    indexOne++;
+  }
+
+  while(indexTwo < subArrayTwo){
+    vec[indexMerge] = right[indexTwo];
+    indexMerge++;
+    indexTwo++;
+  }
+
 }
 
 
@@ -73,6 +78,7 @@ void mergeSort(vector<int> &vec, int inicio, int fim){
     mergeSort(vec, inicio, meio);
     mergeSort(vec, meio + 1, fim);
     merge(vec, inicio, meio, fim);
+
   }
 }
 

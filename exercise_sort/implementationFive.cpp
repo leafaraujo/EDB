@@ -39,19 +39,12 @@ int largElement(vector<int> &vec, int len){
 }
 
 void countSort(vector<int> &vec, int len, int keyMax){
-  int counters[keyMax + 1] = {0};
-  //Esse primeiro loop serve para contar a quantidade de cada elemento no vetor
+  vector<int> counters(keyMax + 1, 0);
+    
   for(int i = 0; i < len; i++){
     counters[vec[i]]++;
   }
 
-  cout << "A quantidade é a seguinte:" << endl;
-  for(int i = 0; i < len; i++){
-      cout << counters[i];   
-      cout << " ";
-    }
-    cout << endl;
-  //Esse segundo loop serve para descobrir a posição final de cada elemento
   for(int j = 1; j <= keyMax; j++){
     counters[j] += counters[j - 1];
   }
@@ -61,7 +54,7 @@ void countSort(vector<int> &vec, int len, int keyMax){
     auxSorted[counters[vec[k]]-1] = vec[k];
     counters[vec[k]] --;
   }
-  
+
   for(int i = 0; i < len; i++){
     vec[i] = auxSorted[i];
   }

@@ -2,6 +2,7 @@
 
 ## Insertion Sort
 |INPUT|OUTPUT I|OUTPUT II|OUTPUT III|
+|-----|--------|---------|----------|
 |10   | Os elementos eram: 1 9 7 2 3 7 4 5 9 7 | Depois de ordenados os elementos são: 1 1 2 3 4 6 6 9 9 10 | O vetor está ordenado!|
 |15   | Os elementos eram: 7 1 1 4 12 13 4 12 6 12 13 3 8 6 15 | Depois de ordenados os elementos são: 1 1 3 4 4 6 6 7 8 12 12 12 13 13 15 | O vetor está ordenado!|
 |20   | Os elementos eram: 1 8 12 4 20 19 10 2 7 17 10 6 15 6 13 3 3 0 5 18 | Depois de ordenados os elementos são: 0 1 2 3 3 4 5 6 6 7 8 10 10 12 13 15 17 18 19 20 | O vetor está ordenado!|

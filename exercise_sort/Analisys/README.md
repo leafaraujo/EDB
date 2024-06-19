@@ -1,4 +1,4 @@
-# Análise da complexidade temporal de cada algoritmo de ordenação construído
+# 1. Tabela do tempo de execução de cada algoritmo
 
 | Quantidade de elementos | Selection Sort | Merge Sort | Count Sort |
 |-------------------------|----------------|------------|------------|
@@ -7,3 +7,7 @@
 |10000| Segundos: 0.0286067 <br>Milisegundos: 28 <br>Microsegundos: 28606 <br>Nanosegundos: 28606687 | Segundos: 0.00139705 <br>Milisegundos: 1 <br>Microsegundos: 1397 <br>Nanosegundos: 1397050 | Segundos: 0.00010463 <br>Milisegundos: 0 <br>Microsegundos: 104 <br>Nanosegundos: 104630|
 |100000| Segundos: 2.80001 <br>Milisegundos: 2800 <br>Microsegundos: 2800008 <br>Nanosegundos: 2800008550 | Segundos: 0.0137836 <br>Milisegundos: 13 <br>Microsegundos: 13783 <br>Nanosegundos: 13783569 | Segundos: 0.00113599 <br>Milisegundos: 1 <br>Microsegundos: 1135 <br>Nanosegundos: 1135989|
 |500000| Segundos: 68.0679 <br>Milisegundos: 68067 <br>Microsegundos: 68067908 <br>Nanosegundos: 68067908790 | Segundos: 0.0751778 <br>Milisegundos: 75 <br>Microsegundos: 75177 <br>Nanosegundos: 75177844 | Segundos: 0.00478254 <br>Milisegundos: 4 <br>Microsegundos: 4782 <br>Nanosegundos: 4782540|
+
+# 2. Análise de tempo de execução x complexidade temporal
+
+- Para esses algoritmos de ordenação utilizados, pode-se perceber que o selection sort se é bem eficiente quando se trata de um vetor com poucos elementos, sendo mais rápido inclusive que os outros dois tipos de algoritmos, no entanto note que por ter como complexidade O(n^2) seu tempo de execução vai se elevando com o tempo, e ele vai se tornando cada vez mais ineficiente com relação aos outros dois. Já com relação ao algoritmo Merge Sort, pode-se notar que com o tempo, ele vai ficando cada vez muito mais eficiente que o primeiro, isso porque ele utiliza a técinca de **dividir e conquistar** já que separa todo o vetor em vários subarrays e depois vai juntando para ordena-los, pois a sua complexidade é de O(log(n)). E o último algoritmo é o mais eficiente, dependendo da situação, pois sua complexidade é dada por O(n+k) na qual n é o tamanho do vetor e k é o tamanho do maior elemento que está presente nele. Nessa implementação ele foi o mais eficiente, pois os elementos dos vetores estava indo até n, mas ele poderia ser menos eficiente caso k > log(n) e seria a pior escolha, caso k > n^2. Dessa forma, para escolher ou não a sua implementação, é necessário que se saiba o maior elemento do vetor a ser trabalhado e verifique se a implementação de algum desses outros algoritmos de implementação não seria mais eficiente.
